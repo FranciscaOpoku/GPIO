@@ -8,20 +8,25 @@ Yellow = LED(27)
 Green = LED(22)
 button = Button(2)
 
-def toggle_lights():
+while True:
+    Red.on
+    sleep(4)
+    Red.off
+    sleep(1)
+    
     Yellow.on
     sleep(4)
-    Green.off
-    Red.on
-    sleep(10)
-    Green.on
-    
-def toggle_green():
-    Green.on
-    Red.off
     Yellow.off
-button.when_pressed = toggle_lights
-button.when_released = toggle_green
-
-pause()
+    sleep(1)
+    
+    Green.on
+    sleep(4)
+    Green.off
+    sleep(1)
+    
+    Red.on
+    Green.on
+    Yellow.on
+    sleep(10)
+    
 
